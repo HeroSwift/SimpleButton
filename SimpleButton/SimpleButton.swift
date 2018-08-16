@@ -20,11 +20,12 @@ public class SimpleButton: UIButton {
     }
     
     public func setBackgroundColor(color: UIColor, for state: UIControlState) {
-        let image = makeImage(color: color)
-        setBackgroundImage(image, for: state)
+        if let image = makeImage(color: color) {
+            setBackgroundImage(UIImage(cgImage: image), for: state)
+        }
     }
     
-    public func makeImage(color: UIColor) -> UIImage {
+    private func makeImage(color: UIColor) -> CGImage? {
         
         let rect = CGRect(origin: CGPoint(x: 0, y: 0), size: frame.size)
         
@@ -34,11 +35,11 @@ public class SimpleButton: UIButton {
         context?.setFillColor(color.cgColor)
         context?.fill(rect)
         
-        let image = UIGraphicsGetImageFromCurrentImageContext()
+        let image = context?.makeImage()
         
         UIGraphicsEndImageContext()
         
-        return image!
+        return image
         
     }
     
