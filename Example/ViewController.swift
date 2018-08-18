@@ -21,6 +21,11 @@ class ViewController: UIViewController {
         }
         button.setBackgroundColor(color: .red, for: .highlighted)
         
+        button.setLeftBorder(width: 0.5, color: .red)
+        button.setTopBorder(width: 0.5, color: .blue)
+        button.setRightBorder(width: 0.5, color: .green)
+        button.setBottomBorder(width: 0.5, color: .cyan)
+        
     }
 
     override func didReceiveMemoryWarning() {
