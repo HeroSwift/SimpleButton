@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        button.onPress = {
+        button.onClick = {
             print("123")
         }
         button.setBackgroundColor(color: .red, for: .highlighted)

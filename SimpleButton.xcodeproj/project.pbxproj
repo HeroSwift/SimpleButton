@@ -15,6 +15,16 @@
 		9DD98BF8212556F90050F376 /* SimpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD98BF7212556F90050F376 /* SimpleButton.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		9D7105B5213BB86000B1DF7C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9DD98BCD212556BD0050F376 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DD98BD5212556BD0050F376;
+			remoteInfo = SimpleButton;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		9DD98BD6212556BD0050F376 /* SimpleButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SimpleButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD98BDA212556BD0050F376 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -128,6 +138,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				9D7105B6213BB86000B1DF7C /* PBXTargetDependency */,
 			);
 			name = Example;
 			productName = Example;
@@ -211,6 +222,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9D7105B6213BB86000B1DF7C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9DD98BD5212556BD0050F376 /* SimpleButton */;
+			targetProxy = 9D7105B5213BB86000B1DF7C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9DD98BEB212556C90050F376 /* Main.storyboard */ = {
@@ -355,6 +374,7 @@
 		9DD98BDF212556BD0050F376 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -383,6 +403,7 @@
 		9DD98BE0212556BD0050F376 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
