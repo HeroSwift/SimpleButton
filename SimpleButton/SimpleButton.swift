@@ -5,6 +5,8 @@ public class SimpleButton: UIButton {
     
     public var onClick: (() -> Void)?
     
+    public var borderRadius: CGFloat = 0
+    
     private var leftBorder: UIView?
     private var leftBorderConstraints: [NSLayoutConstraint]?
     
@@ -31,7 +33,7 @@ public class SimpleButton: UIButton {
         addTarget(self, action: #selector(self.touchUpInside), for: .touchUpInside)
     }
     
-    public func setBackgroundColor(color: UIColor, for state: UIControlState) {
+    public func setBackgroundColor(_ color: UIColor, for state: UIControlState) {
         if let image = makeImage(color: color) {
             setBackgroundImage(UIImage(cgImage: image), for: state)
         }
@@ -141,7 +143,15 @@ public class SimpleButton: UIButton {
         
         let context = UIGraphicsGetCurrentContext()
         context?.setFillColor(color.cgColor)
-        context?.fill(rect)
+        
+        if borderRadius > 0 {
+            let borderPath = UIBezierPath(roundedRect: rect, cornerRadius: borderRadius)
+            context?.addPath(borderPath.cgPath)
+            context?.fillPath()
+        }
+        else {
+            context?.fill(rect)
+        }
         
         let image = context?.makeImage()
         

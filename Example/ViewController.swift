@@ -19,7 +19,8 @@ class ViewController: UIViewController {
         button.onClick = {
             print("123")
         }
-        button.setBackgroundColor(color: .red, for: .highlighted)
+        button.borderRadius = 10
+        button.setBackgroundColor(.red, for: .normal)
         
         button.setLeftBorder(width: 0.5, color: .red)
         button.setTopBorder(width: 0.5, color: .blue)
