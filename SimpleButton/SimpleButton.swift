@@ -99,7 +99,6 @@ public class SimpleButton: UIButton {
             return
         }
         let inside = isPointInside(point.x, point.y)
-        print(inside)
         if inside != isTouchingInside {
             isTouchingInside = inside
             if isTouchingInside {
